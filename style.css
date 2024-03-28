@@ -1,0 +1,441 @@
+@font-face {
+    font-family: 'SuperModernBlack';
+    src: url('./assets/Super\ Modern\ black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Madina';
+    src: url('./assets/Madina.otf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*GENERAL*/
+
+:root {
+    --white: #E1DFE3;
+    --bg: rgb(26, 26, 26);
+    --red: #A21627;
+    --brown: #3d3535;
+    --blue: #92949A;
+    --font-ubuntu: 'Ubuntu', sans-serif;
+    --font-modern: 'SuperModernBlack', sans-serif;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--bg);
+    color: var(--white);
+}
+
+h1 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: 'SuperModernBlack', sans-serif;
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-family: 'SuperModernBlack', sans-serif;
+}
+
+h4 {
+    font-size: 3rem;
+    font-family: 'Madina', sans-serif;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white)
+}
+
+p {
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a :visited,
+:link,
+:focus {
+    color: var(--white);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--brown);
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: var(--white);
+    border: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: var(--red);
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.d-none {
+    display: none;
+}
+
+/* FLEXBOX */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.texte-center {
+    text-align: center;
+}
+
+/*MARGES PADDING*/
+.mAuto {
+    margin: auto;
+}
+
+.pB30 {
+    padding-bottom: 30px;
+}
+
+.pT50 {
+    padding-top: 50px;
+}
+
+.mB16 {
+    margin-bottom: 16px;
+}
+
+.mB48 {
+    margin-bottom: 48px;
+}
+
+.mB150 {
+    margin-bottom: 150px;
+}
+
+.pContener {
+    padding: 150px 0;
+}
+
+/* STYLE CARRE SEPARATION*/
+.carre {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg);
+}
+
+.carreContainer {
+    gap: 10px;
+    padding-top: 5px;
+}
+
+.traitHorizontal {
+    border-top: 2px solid var(--bg);
+    width: 100%;
+}
+
+.traitHorizontalblanc {
+    border-top: 1px solid var(--white);
+    width: 100%;
+}
+
+.titre {
+    border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
+    padding: 32px 0;
+    box-shadow: #000 0px 0px 5px 1px;
+}
+
+/*TAILLES ET CONTNEURS*/
+.container-1200 {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w-img-toast {
+    width: 300px;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.wFit {
+    width: fit-content;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.gap10 {
+    gap: 10px;
+}
+
+.gap20 {
+    gap: 20px;
+}
+
+.gap30 {
+    gap: 30px;
+}
+
+.gap40 {
+    gap: 40px;
+}
+
+.gap50 {
+    gap: 50px;
+}
+
+/*FONTS*/
+.font-S-20 {
+    font-size: 20px;
+}
+
+/*HEADER*/
+header {
+    background-color: var(--bg);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 16px 0;
+}
+
+header ul a {
+    font-size: 20px;
+}
+
+.header-fantome {
+    height: 100px;
+}
+
+/* MENU BURGER */
+.burger-menu {
+    width: 35px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    position: absolute;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.bar:nth-child(1) {
+    top: 0;
+}
+
+.bar:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bar:nth-child(3) {
+    bottom: 0;
+}
+
+.burger-menu.open .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.burger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+.fenetre-menu {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg);
+    position: fixed;
+    top: 81px;
+    left: 0;
+    z-index: 1;
+}
+
+.fenetre-menu ul {
+    padding: 25px;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    list-style-type: none;
+    text-align: center;
+    line-height: 50px;
+}
+
+/*HERO*/
+.hero {
+    background-image: url('./assets/img_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 200px);
+    color: var(--bg);
+}
+
+.warning {
+    color: var(--white);
+    background-color: #A21627;
+    border-radius: 5px;
+    padding: 6px;
+    margin-top: 8px;
+}
+
+.texthero p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.trad {
+    width: 100%;
+    color: var(--white);
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+/*PAINOSCOPE*/
+.card {
+    width: 290px;
+    color: var(--white);
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid var(--white);
+}
+
+.card>p {
+    margin-top: 8px;
+}
+
+/*FOOTER*/
+footer {
+    position: relative;
+}
+
+.imgfooter {
+    width: 500px;
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+}
+
+.carreF {
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+}
+
+footer ul a {
+    font-weight: 700;
+}
+
+footer ul>li {
+    margin-top: 8px;
+}
+
+@media only screen and (max-width: 579px) {
+    body {
+        padding: 0 8px;
+    }
+
+    .d-noneR {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    header {
+        padding: 16px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+    .w-img-toast {
+        width: 100%;
+    }
+
+    .w100R {
+        width: 100%;
+    }
+
+    .mB20R {
+        margin-bottom: 20px;
+    }
+
+    .pContener {
+        padding: 75px 0;
+    }
+
+    .hero {
+        background-position: contain;
+        background-repeat: no-repeat;
+        height: 100vh;
+        padding: 16px;
+    }
+}
