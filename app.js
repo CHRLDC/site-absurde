@@ -52,3 +52,5 @@ btn.forEach(element => {
         alert(randomMessage);
     });
 });
+
+AOS.init();
